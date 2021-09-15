@@ -1,0 +1,218 @@
+/*  Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+*::placeholder {
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  color: white;
+  background-image: linear-gradient(225deg, #2196f3, #673ab7);
+  background-attachment: fixed;
+}
+
+section {
+  width: clamp(320px, 400px, 60%);
+  padding: 20px;
+  display: grid;
+  grid-template-areas: 
+  "heading heading"
+  "color1 color-size"
+  "color2 color2-size"
+  "grad-type grad-rotate"
+  "text-area text-area"
+  "btn btn"
+  "tip tip";
+  gap: 15px;
+  background: rgba(225, 225, 225, .1);
+  border: 1px solid #f3f3f314;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px #1f1f1f4f;
+  transition: all 0.3s ease;
+  transition-property: left, right, bottom, top;
+}
+
+@media (max-width: 600px) {
+  section {
+    grid-template-areas: 
+    "heading "
+    "color1"
+    "color-size"
+    "color2"
+    "color2-size"
+    "grad-rotate"
+    "grad-type"
+    "text-area"
+    "btn"
+    "tip";
+  }
+}
+
+.move {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+h2 {
+  grid-area: heading;
+}
+
+input,
+select,
+textarea {
+  background: transparent;
+  color: white;
+  border: 1px solid #222;
+  border-radius: 3px;
+}
+
+input:not([type="color"]),
+select,
+textarea {
+  padding: 5px 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: white;
+  box-shadow: 0 0 5px #2196f3;
+}
+
+select option{
+  color: #222;
+}
+#color {
+  grid-area: color1;
+}
+
+#color-size {
+  grid-area: color-size;
+}
+
+#color2 {
+  grid-area: color2;
+}
+
+#color2-size {
+  grid-area: color2-size;
+}
+
+#select {
+  grid-area: grad-type;
+}
+
+#output {
+  grid-area: text-area;
+}
+
+button {
+  margin: auto;
+  padding: 8px 10px;
+  grid-area: btn;
+  position: relative;
+  background: none;
+  color: white;
+  border: 2px solid white;
+  transition: color 0.3s linear;
+  overflow: hidden;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background: white;
+  transition: left 0.3s linear;
+  z-index: -1;
+}
+
+button:hover {
+  color: #222;
+}
+
+button:hover::before {
+  left: 0;
+}
+
+.tooltip {
+  width: max-content;
+  margin: auto;
+  padding: 5px;
+  grid-area: tip;
+  text-align: center;
+  background: #222;
+  position: relative;
+  border-radius: 4px;
+  opacity: 0;
+}
+
+.tooltip.show {
+  animation: show-and-hide 2s linear 0s 1;
+
+}
+
+.tooltip::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 15px;
+  top: -1px;
+  transform: rotatez(45deg) translate(-50%);
+  background: #222;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+@keyframes show-and-hide {
+  0%{
+    opacity: .50;
+  }
+  25% {
+    opacity: .75;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+footer {
+  position: fixed;
+  padding: 5px;
+  left: 0;
+  bottom: 0;
+  background: rgba(225, 225, 225, .1);
+  backdrop-filter: blur(20px);
+}
+footer a {
+  color: #222;
+  font-weight: bold;
+}

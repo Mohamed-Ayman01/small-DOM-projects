@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom cursor using js - JS DOM Practice</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -o-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: monospace, Arial;
+      color: #222;
+      cursor: none;
+    }
+
+    *::selection {
+      color: black;
+      background-color: white;
+    }
+
+    .cursor {
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 2px solid #222;
+      border-radius: 50%;
+      transition: .3s linear;
+      transition-property: background-color, transform;
+      transform: translate(-50%, -50%);
+      transform-origin: 100% 100%;
+      pointer-events: none;
+      z-index: -10;
+    }
+    
+    .box {
+      width: 300px;
+      padding: 2rem .5rem;
+      border: 3px solid #222;
+      transition: .3s linear;
+    }
+
+    .box:hover {
+      color: white
+    }
+
+    .hover {
+      background-color: #222;
+      transform: scale(3);
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="box">
+    <h1>Text Box</h1>
+    <h3><b>Hover Me</b></h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima neque laboriosam distinctio tenetur voluptas reiciendis aliquid doloribus, iste odio amet vero. Debitis, sapiente delectus.</p>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

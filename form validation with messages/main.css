@@ -1,0 +1,140 @@
+/* Import Font */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+*::selection {
+  background: white;
+  color: #ff9800;
+}
+
+:root {
+  --main-clr: #1b87a1;
+  --sec-clr: #3097b0;
+  --font-clr: white;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-clr);
+  background: var(--main-clr);
+  font-family: "Poppins", sans-serif;
+}
+
+form {
+  padding: 1rem 2rem;
+  width: clamp(300px, 360px, 400px);
+  display: flex;
+  flex-direction: column;
+  background: var(--main-clr);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #1d90ac, #187a91);
+  box-shadow: 16px 16px 46px #15697e, -16px -16px 46px #21a5c4;
+}
+
+form div {
+  margin: 0.5rem 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+input {
+  padding: 0.75rem;
+  background: transparent;
+  border: none;
+  border: 2px solid var(--sec-clr);
+  border-radius: .5rem;
+  caret-color: #ddd;
+  color: var(--font-clr);
+  text-indent: 1rem
+}
+
+label {
+  padding: 5px;
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 0.75rem;
+  transition: 0.2s linear;
+  border: 1px solid var(--main-clr);
+  border-radius: 3px;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+  background-color: var(--sec-clr);
+}
+
+button {
+  margin: auto;
+  padding: 0.5rem 1rem;
+  width: max-content;
+  color: var(--font-clr);
+  background: none;
+  border: 2px solid var(--sec-clr);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--main-clr);
+}
+
+.warning {
+  padding: 0.4rem;
+  font-size: 0.75rem;
+  background: #ff9800;
+  position: relative;
+  transition: 0.3s;
+  display: none;
+}
+
+.showen {
+  display: block;
+  animation: show 1s linear 0s 1;
+}
+
+@keyframes show {
+  0% {
+    display: block;
+    opacity: 0%;
+  }
+  25% {
+    opacity: 25%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  75% {
+    opacity: 75%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.warning:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: -5px;
+  left: 15px;
+  background: #ff9800;
+  transform: rotatez(45deg);
+  z-index: 0;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validated Sign Up Form</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <form action="">
+    <div class="name">
+      <input type="text" name="username" id="username">
+      <label for="username">Username</label>
+      <div class="warning">
+        UserName must not be empty and must be less than 12 characters and must not contain (/ or . or ")
+      </div>
+    </div>
+    <div class="email">
+      <input type="email" name="email" id="email">
+      <label for="email">Email</label>
+      <div class="warning ">
+        Email must not be empty try writing a valid Email
+      </div>
+    </div>
+    <div class="pass">
+      <input type="password" name="password" id="password">
+      <label for="password">Password</label>
+      <div class="warning">
+        must be more than 12 characters try to type a strong password use numbers, characters, symbols 
+      </div>
+    </div>
+    <button type="submit">Sign Up</button>
+  </form>
+</body>
+</html>

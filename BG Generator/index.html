@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Generator - Gradient / background</title>
+    <!-- CSS & ICON -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Gradient.jpg" />
+    <!-- JS -->
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <h2>Gradient Generator</h2>
+      <input type="color" name="color" id="color" />
+      <input type="number" name="color-size" id="color-size" placeholder="Color 1 width in precent">
+
+      <input type="color" name="color2" id="color2" />
+      <input type="number" name="color2-size" id="color2-size" placeholder="Color 2 width in precent">
+
+      <select name="grad-type" id="select">
+        <option value="linear">Linear Gradient</option>
+        <option value="radial">Radial Gradient</option>
+      </select>
+      <input
+        type="number"
+        name="rotate"
+        id="rotate"
+        placeholder="Rotation Degeree OR Size in pixels"
+        min="0"
+      />
+      <textarea name="output" id="output" cols="40" rows="10" readonly></textarea>
+      <button class="btn" id="copy">Copy Code</button>
+      <span class="tooltip">Copied !</span>
+    </section>
+    <footer>
+      <p>Made By <a href="https://github.com/Mohamed-Ayman01" target="_blank">Dev.Mohamed Ayman</a></p>
+    </footer>
+  </body>
+</html>
