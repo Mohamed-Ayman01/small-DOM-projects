@@ -92,7 +92,7 @@ select:focus,
 textarea:focus {
   outline: none;
   border-color: white;
-  box-shadow: 0 0 5px #2196f3;
+  box-shadow: 0 0 5px white;
 }
 
 select option{

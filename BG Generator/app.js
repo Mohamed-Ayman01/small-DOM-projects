@@ -16,19 +16,23 @@ const textArea = document.getElementById("output");
 const copyBtn = document.getElementById("copy");
 const tooltip = document.querySelector(".tooltip");
 
+// Array Of Inputs
 const inputs = [colorOne, colorOneSize, colorTwo, colorTwoSize, gradtype, gradRotate];
 
+// Lopping on the inputs and catching chnages by onInput event to update style / Output Box 
 inputs.forEach((el) => {
   el.oninput = () => {
-    let linearBg = `linear-gradient(${gradRotate.value !== "" ? gradRotate.value + "deg" : "to left"}, ${colorOne.value} ${colorOneSize.value !== "" ? colorOneSize.value + "%" : ""}, ${colorTwo.value} ${colorTwoSize.value !== "" ? colorTwoSize.value + "%" : ""})`;
-    let radialBg = `radial-gradient(${gradRotate.value !== "" ? gradRotate.value + "px" : "200px"}, ${colorOne.value},${colorTwo.value})`;
+    let linearBg = `background-image: linear-gradient(${gradRotate.value !== "" ? gradRotate.value + "deg" : "to left"}, ${colorOne.value} ${colorOneSize.value !== "" ? colorOneSize.value + "%" : ""}, ${colorTwo.value} ${colorTwoSize.value !== "" ? colorTwoSize.value + "%" : ""});
+background-attachment: fixed;`;
+    let radialBg = `background-image: radial-gradient(${gradRotate.value !== "" ? gradRotate.value + "px" : "200px"}, ${colorOne.value},${colorTwo.value});
+background-attachment: fixed;`;
 
     if (gradtype.value === "linear") {
-      document.body.style = `background-image: ${linearBg}; background-attachment: fixed;`;
+      document.body.style = `${linearBg};`;
       textArea.textContent = linearBg;
       section.classList.remove("move");
     } else {
-      document.body.style = `background-image: ${radialBg}; background-attachment: fixed;`;
+      document.body.style = `${radialBg};`;
       textArea.textContent = radialBg;
       section.classList.add("move");
     }
