@@ -1,19 +1,19 @@
 # DOM-Projects
 
-> simple JS DOM for Learning
+> simple JS DOM Projects for Learning
 
 ## Background Gradient Generator with Multi Option
 
-[Live Preview](https://codepen.io/Mo-SlimedGhost/full/dyRZzOW)
+[Live Preview](https://mohamed-ayman01.github.io/DOM-Projects/BG%20Generator/)
 
 ## Custom Mouse Cursor With Animation
 
-[live Preview](https://codepen.io/Mo-SlimedGhost/full/yLXXjPg)
+[live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Custom%20Cursor)
 
 ## Advanced Form Validation with warning and muliple conditions
 
-[live Preview](https://codepen.io/Mo-SlimedGhost/full/dyRRMKG)
+[live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Multi%20Currency%20Converter/)
 
 ## Multiple Currency Converter
 
-[live Preview](https://codepen.io/Mo-SlimedGhost/full/PojjRoO)
+[live Preview](https://mohamed-ayman01.github.io/DOM-Projects/form%20validation%20with%20messages/)
