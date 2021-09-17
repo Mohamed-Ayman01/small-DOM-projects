@@ -10,10 +10,10 @@
 
 [live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Custom%20Cursor)
 
-## Advanced Form Validation with warning and muliple conditions
+## Multiple Currency Converter
 
 [live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Multi%20Currency%20Converter/)
 
-## Multiple Currency Converter
+## Advanced Form Validation with warning and muliple conditions
 
 [live Preview](https://mohamed-ayman01.github.io/DOM-Projects/form%20validation%20with%20messages/)
