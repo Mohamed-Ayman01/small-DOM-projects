@@ -170,7 +170,6 @@ button:hover::before {
 
 .tooltip.show {
   animation: show-and-hide 2s linear 0s 1;
-
 }
 
 .tooltip::before {

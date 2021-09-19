@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+body img {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.container .images {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 60%;
+  gap: 20px;
+}
+
+.container .images aside {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 150px;
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .container .images {
+    flex-direction: column;
+  }
+
+  .container .images aside {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .container .images aside img {
+    width: 130px;
+  }
+}
+
+.container .images aside img {
+  display: block;
+  max-width: 100%;
+  height: 130px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .images aside img:hover,
+.container .images aside img.active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+  opacity: .7;
+}
+
+
+.container .images .display-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .images .display-box img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.container .product-desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container .product-desc span {
+  color: #676767;
+}
+
+.container .product-desc h2 {
+  position: relative;
+  width: max-content;
+}
+
+.container .product-desc h2::before {
+  content: '';
+  width: 25%;
+  height: 3px;
+  position: absolute;
+  left: 50px;
+  bottom: -10px;
+  transform: translatex(-50%);
+  background: #222;
+}
+
+.container .product-desc p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+.container .product-desc button {
+  width: max-content;
+  margin-right: 5px;
+  padding: .5rem;
+  background: none;
+  border: 1px solid #222;
+  border-radius: .25rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.container .product-desc button:hover {
+  color: white;
+  background: #222;
+}
+
+.container .product-desc #buy {
+  margin: 20px 0;
+  display: block;
+  border: 2px solid #ff7b00;
+}
+
+.container .product-desc #buy:hover {
+  color: white;
+  background: #ff7b00;
+}
