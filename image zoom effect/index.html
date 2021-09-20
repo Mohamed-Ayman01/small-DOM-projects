@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Zoom Effect</title>
+    <!-- JS -->
+    <script src="main.js" defer></script>
+    <!-- CSS -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        width: clamp(280px, 500px, 80%);
+        overflow: hidden;
+        box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s;
+      }
+      img:hover {
+        
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img
+        src="img.jpg"
+        alt="an image of a red nike shoes wtih a red background"
+      />
+    </div>
+  </body>
+</html>

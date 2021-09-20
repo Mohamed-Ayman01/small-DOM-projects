@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop Up / Modal</title>
+    <!-- JS -->
+    <script src="main.js" defer></script>
+    <!-- CSS -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: arial, tahoma;
+        line-height: 1.3;
+      }
+
+      .box {
+        width: clamp(300px, 400px, 500px);
+        padding: 2rem;
+        border: 2px solid #efef;
+        border-radius: 0.25rem;
+        box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .box > *:not(.modal, .overlay) {
+        margin: 0.5rem 0;
+      }
+
+      .box button {
+        padding: 0.5rem 0.25rem;
+        border: 1px solid #222;
+        background: none;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .box button:hover {
+        color: white;
+        background-color: #222;
+      }
+
+      .modal {
+        width: clamp(200px, 500px, 90%);
+        padding: 2rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        background-color: #fff;
+        border-radius: 0.25rem;
+        box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.1);
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        z-index: 10;
+        display: none;
+      }
+
+      .overlay {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        display: none;
+      }
+
+      .modal.active,
+      .overlay.active {
+        display: block;
+      }
+
+      .modal .exit {
+        padding: 0.75rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: red;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      .modal .exit:hover {
+        background-color: rgb(201, 7, 7);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Some Heading</h1>
+      <p>
+        Some Random Text Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Doloremque animi tenetur illum aliquid qui laborum aut!
+      </p>
+      <button>See More</button>
+      <div class="modal">
+        <button class="exit">&times;</button>
+        <h2>Maybe Some Interisting Text Or A Warning</h2>
+        <p>
+          random modal text Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Itaque quo, aliquam nihil sequi nulla quis est provident placeat
+          soluta corrupti incidunt amet odit, inventore tempore dolor
+          dignissimos explicabo enim pariatur.
+        </p>
+      </div>
+      <div class="overlay"></div>
+    </div>
+  </body>
+</html>
