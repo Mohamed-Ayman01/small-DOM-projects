@@ -21,3 +21,6 @@
 ## Display Selected Img From A Set Of Imgs
 
 [Live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Display%20selected%20img/)
+
+### Image Zoom Effect
+[live preview](https://mohamed-ayman01.github.io/DOM-Projects/image%20zoom%20effect/)
