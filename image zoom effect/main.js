@@ -1,16 +1,18 @@
 let img = document.images[0];
+let box = document.querySelector(".box");
 
-img.addEventListener("mousemove", zoomOnMove);
-img.addEventListener("mouseout", exitZoom);
+box.addEventListener("mousemove", zoomOnMove);
+box.addEventListener("mouseout", exitZoom);
 
 function zoomOnMove(e) {
-  let xAxis = e.clientX - e.offsetX + "px";
-  let yAxis = e.clientY - e.offsetY + "px";
+  let xAxis = e.pageX - e.target.offsetLeft;
+  let yAxis = e.pageY - e.target.offsetTop;
 
-  img.style.transformOrigin = `${xAxis} ${yAxis}`;
-  img.style.transform = "scale(1.5)";
+  img.style.transformOrigin = `${xAxis}px ${yAxis}px`;
+  img.style.transform = "scale(2)";
 }
 
 function exitZoom() {
   img.style.transform = "scale(1)";
+  img.style.transformOrigin = "center center";
 }
