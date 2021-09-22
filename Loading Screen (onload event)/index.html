@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Screen whith animations</title>
+    <!-- CSS -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 640px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+      }
+
+      .box {
+        height: 320px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .load {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #e0f2f1;
+        transition: 800ms ease-in-out;
+      }
+
+      span {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 5px solid #42a5f5;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: load 3s linear 0s infinite;
+      }
+
+      @keyframes load {
+        from {
+          transform: rotateZ(0deg);
+        }
+        to {
+          transform: rotateZ(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="load">
+      <span></span>
+    </div>
+    <div class="container">
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1631945387381-d83bbe39cb54?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=459&q=80"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1534341329-c5af0d36081f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1632143134999-d2153b16b433?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1631885771268-1e1cac7f343b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=415&q=80"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1618866506541-c866cd8810a4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=385&q=80"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1631778890260-2be2609eb9ec?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=509&q=80"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1550940857-b8eec3d11873?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1887&q=80"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1524715324774-b46ab3971a9f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1631624224925-b7810331159b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+          alt=""
+        />
+      </div>
+      <div class="box">
+        <img
+          src="https://images.unsplash.com/photo-1605093174428-a21849b7dbbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1888&q=80"
+          alt=""
+        />
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
