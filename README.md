@@ -27,3 +27,6 @@
 
 ### Pop Up / Modal with animations
 [live preview](https://mohamed-ayman01.github.io/DOM-Projects/pop%20up%20-%20modal/)
+
+### Loading Screen (using onlaod event)
+[live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Loading%20Screen%20(onload%20event)/)
