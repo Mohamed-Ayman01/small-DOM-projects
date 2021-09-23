@@ -40,7 +40,7 @@ background-attachment: fixed;`;
 });
 
 copyBtn.addEventListener('click', copyCode);
-copyBtn.addEventListener("mouseleave", () => tooltip.classList.remove("show"))
+copyBtn.addEventListener("mouseleave", () => setTimeout(() => tooltip.classList.remove("show"), 500) )
 
 function copyCode() {
   textArea.select();
