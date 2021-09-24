@@ -9,24 +9,28 @@ btns.forEach((el) => el.addEventListener("click", filterImgs));
 function filterImgs() {
   imgBoxes.forEach((el) => {
     el.style.opacity = "0";
-    setTimeout(() => {el.style.display = "none"}, 500)
+    setTimeout(() => {
+      el.style.display = "none";
+    }, 500);
     setTimeout(() => {
       if (el.getAttribute("data-filter") == this.className) {
         el.style.opacity = "1";
         el.style.display = "block";
       }
-    }, 600)
+    }, 600);
   });
 }
 
 function showAllBoxes() {
   imgBoxes.forEach((el) => {
     el.style.opacity = "0";
-    el.style.display = "none";
+    setTimeout(() => {
+      el.style.display = "none";
+    }, 500);
     setTimeout(() => {
       el.style.display = "block";
       el.style.opacity = "1";
-    }, 500)
+    }, 500);
   });
 }
 
