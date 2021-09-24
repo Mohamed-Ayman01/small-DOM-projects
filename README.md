@@ -23,10 +23,18 @@
 [Live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Display%20selected%20img/)
 
 ### Image Zoom Effect
+
 [live preview](https://mohamed-ayman01.github.io/DOM-Projects/image%20zoom%20effect/)
 
 ### Pop Up / Modal with animations
+
 [live preview](https://mohamed-ayman01.github.io/DOM-Projects/pop%20up%20-%20modal/)
 
 ### Loading Screen (using onlaod event)
+
 [live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Loading%20Screen%20(onload%20event)/)
+
+### Our-work Section Filter
+
+[live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Our-work%20sect%20with-filter/)
+
