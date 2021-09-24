@@ -30,7 +30,7 @@ function showAllBoxes() {
     setTimeout(() => {
       el.style.display = "block";
       el.style.opacity = "1";
-    }, 500);
+    }, 600);
   });
 }
 
