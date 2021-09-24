@@ -85,13 +85,14 @@ h1::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, auto));
   gap: 1rem;
+  transition: .5s ease-in-out;
 }
 
 .img-container .box {
   height: 300px;
   overflow: hidden;
   box-shadow: 2px 4px 10px rgb(0 0 0 / 15%);
-  transition: 500ms;
+  transition: .5s ease-in-out;
   cursor:zoom-in;
 }
 
@@ -99,5 +100,5 @@ h1::after {
   display: block;
   width: 100%;
   height: 100%;
-  transition: transform 500ms;
+  transition: transform .5s ease-in-out;
 }
