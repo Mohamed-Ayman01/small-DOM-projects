@@ -1,6 +1,6 @@
 # DOM-Projects
 
-> simple JS DOM Projects for Learning
+simple JS Projects for Learning
 
 ### Background Gradient Generator with Multi Option
 
@@ -38,3 +38,14 @@
 
 [live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Our-work%20sect%20with-filter/)
 
+|  Projcet |  Live Prview |
+|:-:|:-:|
+| Background Gradient Generator with Multi Option  | [Live Preview](https://mohamed-ayman01.github.io/DOM-Projects/BG%20Generator/)  |
+|   |   |
+|   |   |
+|   |   |
+|   |   |
+|   |   |
+|   |   |
+|   |   |
+|   |   |
