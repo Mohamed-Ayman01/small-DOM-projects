@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: arial;
+  background: #6a1b9a;
+  color: white;
+}
+
+p {
+  font-size: 1.25rem;
+  position: relative;
+}
+
+p::after {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: -5px;
+  animation: blink 500ms linear 0s infinite ;
+}
+
+@keyframes blink {
+  from {
+    background-color: #fff
+  }
+  to {
+    background-color: transparent;
+  }
+}
