@@ -3,7 +3,7 @@
 ## simple JS Projects for Learning
 
 |  Projcet |  Live Prview |
-|:-:|:-:|
+|---|:-:|
 | Background Gradient Generator with Multi Option  | [Live Preview](https://mohamed-ayman01.github.io/DOM-Projects/BG%20Generator/)  |
 | Custom Mouse Cursor With Animation | [live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Custom%20Cursor) |
 | Multiple Currency Converter | [live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Multi%20Currency%20Converter/) |
