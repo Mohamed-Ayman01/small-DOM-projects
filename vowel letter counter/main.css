@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: teal;
+  font-family: arial, tahoma;
+  color: #fff;
+}
+
+.container {
+  width: clamp(300px, 400px, 90%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container > * {
+  margin: .5rem
+}
+
+.container input {
+  padding: .5rem;
+}
