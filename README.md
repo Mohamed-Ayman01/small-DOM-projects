@@ -15,4 +15,7 @@
 | Our-work Section Filter | [live Preview](https://mohamed-ayman01.github.io/DOM-Projects/Our-work%20sect%20with-filter/) |
 | Multiple Tabs | [liver preview](https://mohamed-ayman01.github.io/DOM-Projects/Tabs/) |
 | Auto Text Writting Effect | [liver preview](https://mohamed-ayman01.github.io/DOM-Projects/Auto%20text%20write%20animation/) |
-| Dark/Light Mode Toggle | [Live preview](https://mohamed-ayman01.github.io/DOM-Projects/Dark-light%20Mode/)
+| Dark/Light Mode Toggle | [Live preview](https://mohamed-ayman01.github.io/DOM-Projects/Dark-light%20Mode/) |
+| Vowel Letters Counter | [Live preview](https://mohamed-ayman01.github.io/DOM-Projects/vowel%20letter%20counter/) |
+| Generate Random Content Arom A Set | [Live preview](https://mohamed-ayman01.github.io/DOM-Projects/Generate%20random%20content/) |
+| Auto field navigation | [live preview](https://mohamed-ayman01.github.io/DOM-Projects/navigate%20fields%20using%20event%20simualtion/) |
