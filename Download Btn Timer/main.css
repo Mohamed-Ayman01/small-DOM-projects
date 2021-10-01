@@ -35,4 +35,5 @@ button {
   cursor: pointer;
   opacity: .7;
   pointer-events: none;
+  transition: 500ms;
 }
