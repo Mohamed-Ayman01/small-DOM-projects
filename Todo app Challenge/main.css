@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* Varibles */
+:root {
+  --main-clr: #ffb300;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+}
+
+
+/* Bootstrap 3 Container code */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px){
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.container {
+  padding: 1.5rem;
+  margin: 1rem;
+  font-family: "work sans", sans-serif, arial;;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  background-color: var(--main-clr);
+  border-radius: .25rem;
+  color: #fff;
+}
+
+.input {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: .25rem;
+}
+
+.input input {
+  flex: 1 1;
+  padding: .50rem;
+  border: 1px solid #222;
+  caret-color: var(--main-clr);
+}
+
+.input input:hover,
+.input input:focus {
+  outline: none;
+  border-color: var(--main-clr)
+}
+
+.input .sub-task,
+.task .del-task {
+  padding: .5rem;
+  border: none;
+  color: white;
+  background: var(--main-clr);
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.input .sub-task:hover,
+.task .del-task:hover {
+  transform: scale(1.2, 1.1) rotateZ(5deg);
+}
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.task {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  background-color: #fff;
+  color: black;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.task p {
+  display: flex;
+}
+
+.task .del-task {
+  position: absolute;
+  right: -.75rem;
+  top: -.75rem;
+  background-color: red;
+}
+
+i {
+  color: #333;
+  padding: .5rem;
+}
