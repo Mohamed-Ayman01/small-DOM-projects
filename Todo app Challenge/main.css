@@ -42,19 +42,34 @@ body {
 }
 
 .popup .exit {
-  padding: .50rem;
+  width: 25px;
+  height: 25px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -5px;
+  right: -5px;
   color: white;
   border: none;
   background-color: red;
   cursor: pointer;
 }
 
+
 .popup h2 {
   text-align: center;
   padding: 2rem 0;
+}
+
+.popup span {
+  margin: 1rem auto;
+  margin-bottom: 0rem;
+  padding: 1rem 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f00;
 }
 
 .popup-overlay {
@@ -63,6 +78,7 @@ body {
   height: 100%;
   background-color: rgba(0 , 0, 0, 0.2);
   transition: 300ms opacity;
+  z-index: 90;
   opacity: 0;
   display: none;
 }
@@ -104,7 +120,7 @@ body {
 
 h3 {
   padding: .5rem;
-  color: #ad7a01;
+  color: black;
   background-color: #ffd000;
   border-left: .25rem solid #ad7a01;
   letter-spacing: 1px;
@@ -122,13 +138,13 @@ h3 {
   flex: 1 1;
   padding: .50rem;
   border: 1px solid #222;
-  caret-color: var(--main-clr);
 }
 
 .input input:hover,
 .input input:focus {
   outline: none;
-  border-color: var(--main-clr)
+  border-color: var(--main-clr);
+  box-shadow: 0 0 3px #ffd000
 }
 
 .input .sub-task,
@@ -162,7 +178,6 @@ h3 {
   background-color: #fff;
   color: black;
   position: relative;
-  /* overflow: hidden; */
 }
 
 .task p {

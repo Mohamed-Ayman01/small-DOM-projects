@@ -17,7 +17,9 @@ function checkForTask() {
         let taskBox = document.createElement("div");
         let paragraph = document.createElement("p");
         let delTaskBtn = document.createElement("button");
-        let paragrapghText = document.createTextNode(window.localStorage.getItem(`Task-No.${i}`));
+        let paragrapghText = document.createTextNode(
+          window.localStorage.getItem(`Task-No.${i}`),
+        );
 
         taskBox.classList.add("task", `Task-No.${i}`);
         delTaskBtn.classList.add("del-task");
@@ -30,39 +32,41 @@ function checkForTask() {
       } else continue;
     }
   } else {
-    if ((document.querySelector(".tasks-container h3") === null)) {
+    if (document.querySelector(".tasks-container h3") === null) {
       let messageH3 = document.createElement("h3");
       messageH3.innerText = "There are no Tasks Yet";
       tasksContainer.append(messageH3);
-    } 
+    }
   }
 }
-checkForTask()
+checkForTask();
 
 // Hold input field value
 let taskVal;
 taskInput.oninput = () => (taskVal = taskInput.value);
 
 // popup (modal)
-
 let popup = document.querySelector(".popup");
 let modalExitBtn = document.querySelector(".popup .exit");
-let overlay = document.querySelector(".popup-overlay")
+let overlay = document.querySelector(".popup-overlay");
 modalExitBtn.onclick = () => {
-  popup.classList.remove("show")
+  popup.classList.remove("show");
   overlay.style.opacity = "0";
 
   setTimeout(() => {
-    popup.style.setProperty("display", "none")
-    overlay.style.setProperty("display", "none")
-  }, 200)
-}
+    popup.style.setProperty("display", "none");
+    overlay.style.setProperty("display", "none");
+  }, 200);
+};
 
-// Add New Task
+// Add New Task func
 function addNewTask() {
   if (taskVal !== "" && taskVal !== undefined) {
     // Save Current Task Title to Local Storage
-    window.localStorage.setItem(`Task-No.${window.localStorage.length}`, taskVal);
+    window.localStorage.setItem(
+      `Task-No.${window.localStorage.length}`,
+      taskVal,
+    );
 
     // clear last value & clear task container
     tasksContainer.innerHTML = "";
@@ -75,19 +79,26 @@ function addNewTask() {
     setTimeout(() => {
       popup.classList.add("show");
       overlay.style.opacity = "1";
-    }, 200)
+    }, 200);
+
+    // clear last value & clear task container
+    tasksContainer.innerHTML = "";
+    taskInput.value = "";
+    taskVal = "";
   }
 }
-submitTaskBtn.addEventListener("click",  addNewTask);
+submitTaskBtn.addEventListener("click", addNewTask);
 // Add task to tasks container using => checkForTask() func
-submitTaskBtn.addEventListener("click",  checkForTask);
+submitTaskBtn.addEventListener("click", checkForTask);
 
 // Remove done Task
 function RemoveCurrentTask() {
   document.addEventListener("click", (e) => {
     if (e.target.classList.contains("del-task")) {
       // Remove Task Data from local storage
-      window.localStorage.removeItem(`${e.target.parentElement.classList.item(1)}`);
+      window.localStorage.removeItem(
+        `${e.target.parentElement.classList.item(1)}`,
+      );
       // remove task Box HTML element
       e.target.parentElement.remove();
     }
