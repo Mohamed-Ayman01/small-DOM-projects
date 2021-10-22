@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  min-height: 2600px;
+  font-family: "work sans", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.head {
+  margin: 100px 0;
+  text-align: center;
+}
+
+.head h1 {
+  font-size: 10vw;
+}
+
+.head i {
+  font-size: clamp(2rem, 4rem, 5rem);
+  color: #ddd;
+}
+
+.skills {
+  margin-top: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.skills .sub-head {
+  flex: 1 1 100%;
+  text-align: center;
+  margin: 2rem;
+}
+
+.skills .sub-head h2 {
+  font-size: 80px;
+  color: #ddd;
+}
+
+@media (max-width: 480px) {
+  .skills .sub-head h2 {
+    font-size: 60px;
+  }
+}
+
+.skills .sub-head p {
+  position: relative;
+  top: -30px;
+  font-size: 2vw;
+  color: #29615c;
+  z-index: 10;
+  font-weight: bold;
+}
+
+.skills .skill-box {
+  padding: 1rem .5rem;
+  flex: 1 1 50%;
+}
+
+@media (max-width: 768px) {
+  .skills .skill-box {
+    flex: 1 1 100%;
+  }
+}
+
+.skills .skill-box .bar {
+  width: 100%;
+  height: 1.5rem;
+  background-color: #ddd;
+  border-radius: .25rem;
+}
+
+.skills .skill-box .bar .progress {
+  display: block;
+  width: 0%;
+  height: 100%;
+  background-color: #03a9f4;
+  transition: 1s width;
+  border-radius: .25rem;
+  position: relative;
+}
+
+.skills .skill-box .bar .progress::before {
+  content: attr(data-prog);
+  position: absolute;
+  padding: 3px;
+  top: -40px;
+  right: -20px;
+  background: #404040;
+  color: white;
+  border-radius: 2px;
+}
+
+.skills .skill-box .bar .progress::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background: #404040;
+  transform: rotateZ(45deg);
+} 
+
+.skills .skill-box p {
+  margin: .25rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
