@@ -2,6 +2,14 @@ const taskInput = document.getElementById("task");
 const submitTaskBtn = document.getElementById("sub-task");
 const tasksContainer = document.querySelector(".tasks-container");
 
+function generateRandomInt (start, max) {
+  let number = Math.floor(Math.random() * max + start);
+
+  while (number > max) number = Math.floor(Math.random() * max + start);
+
+  return number;
+}
+
 // Check If There is tasks in LocalStorage
 function checkForTask() {
   if (window.localStorage.length >= 1) {
@@ -12,16 +20,16 @@ function checkForTask() {
 
     // Loop on tasks to add them
     for (let i = 0; i < window.localStorage.length; i++) {
-      if (window.localStorage.getItem(`Task-No.${i}`)) {
+      let currentItemKey = window.localStorage.key(i);
+      if (currentItemKey !== null) {
         // Create Element and Set attributes
         let taskBox = document.createElement("div");
         let paragraph = document.createElement("p");
         let delTaskBtn = document.createElement("button");
-        let paragrapghText = document.createTextNode(
-          window.localStorage.getItem(`Task-No.${i}`),
-        );
+        let paragrapghText = document.createTextNode(window.localStorage.getItem(`${currentItemKey}`));
 
-        taskBox.classList.add("task", `Task-No.${i}`);
+        taskBox.classList.add("task");
+        taskBox.setAttribute("data-key", `${currentItemKey}`)
         delTaskBtn.classList.add("del-task");
         delTaskBtn.innerText = "Remove";
         paragraph.append(paragrapghText);
@@ -63,10 +71,7 @@ modalExitBtn.onclick = () => {
 function addNewTask() {
   if (taskVal !== "" && taskVal !== undefined) {
     // Save Current Task Title to Local Storage
-    window.localStorage.setItem(
-      `Task-No.${window.localStorage.length}`,
-      taskVal,
-    );
+    window.localStorage.setItem(`ID=${generateRandomInt(1e5, 999_999_9)}`, taskVal,);
 
     // clear last value & clear task container
     tasksContainer.innerHTML = "";
@@ -95,12 +100,14 @@ submitTaskBtn.addEventListener("click", checkForTask);
 function RemoveCurrentTask() {
   document.addEventListener("click", (e) => {
     if (e.target.classList.contains("del-task")) {
-      // Remove Task Data from local storage
-      window.localStorage.removeItem(
-        `${e.target.parentElement.classList.item(1)}`,
-      );
-      // remove task Box HTML element
-      e.target.parentElement.remove();
+      // Remove current Task Data from local storage
+      let currentTaskLSKey = e.target.parentElement.getAttribute("data-key");
+
+      window.localStorage.removeItem(`${currentTaskLSKey}`);
+      // clear Tasks Box
+      tasksContainer.innerHTML = "";
+      // Add task to tasks container using => checkForTask()
+      checkForTask();
     }
   });
 }

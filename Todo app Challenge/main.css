@@ -42,8 +42,8 @@ body {
 }
 
 .popup .exit {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: -5px;
   right: -5px;
@@ -83,14 +83,19 @@ body {
   display: none;
 }
 
+.container {
+  padding: 1.5rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  background-color: var(--main-clr);
+  border-radius: .25rem;
+  color: #fff;
+}
+
 /* Bootstrap 3 Container code */
 
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
 @media (min-width: 768px){
   .container {
     width: 750px;
@@ -107,22 +112,14 @@ body {
   }
 }
 
-.container {
-  padding: 1.5rem;
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  background-color: var(--main-clr);
-  border-radius: .25rem;
-  color: #fff;
-}
 
 h3 {
   padding: .5rem;
-  color: black;
+  color: #795501;
   background-color: #ffd000;
   border-left: .25rem solid #ad7a01;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   letter-spacing: 1px;
 }
 
@@ -137,20 +134,21 @@ h3 {
 .input input {
   flex: 1 1;
   padding: .50rem;
-  border: 1px solid #222;
+  border: 2px solid #949494;
+  border-radius: 2px;
 }
 
 .input input:hover,
 .input input:focus {
   outline: none;
   border-color: var(--main-clr);
-  box-shadow: 0 0 3px #ffd000
 }
 
 .input .sub-task,
 .task .del-task {
   padding: .5rem;
   border: none;
+  border-radius: .25rem;
   color: white;
   background: var(--main-clr);
   transition: 200ms ease-in-out;
@@ -166,11 +164,11 @@ h3 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 20px;
 }
 
 .task {
   padding: 1rem;
+  margin: 10px 0;
   width: 100%;
   display: flex;
   justify-content: flex-start;
