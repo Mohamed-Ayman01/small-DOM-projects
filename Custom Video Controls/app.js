@@ -51,7 +51,7 @@ loopBtn.addEventListener("click", () => {
   }
 });
 
-// Video Volumne Controls
+// Video Volume Controls
 const mute_unmuteBtn = document.querySelector(".mute-unmute");
 const volumeUp = document.querySelector(".volume-up");
 const volumeDown = document.querySelector(".volume-down");
