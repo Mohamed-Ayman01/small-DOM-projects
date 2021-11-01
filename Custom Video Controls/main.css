@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+:root {
+  /* Darker shades */
+  --dark-300: #1b1b1b;
+  --dark-200: #333;
+  --dark-100: #5c5c5c45;
+  /* lighter shades */
+  --light-200: #545454;
+  --light-100: #3d3d3d;
+}
+
+body {
+  min-height: 100vh;
+  font-family: arial, tahoma, sans-serif;
+  background-color: #fff;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+@media (min-width: 768px){
+  .container {
+      width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+      width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+      width: 1100px;
+  }
+}
+
+.container video {
+  width: 100%;
+  max-width: 100%;
+}
+
+.container .controls {
+  width: calc(100% - 30px);
+  height: 40px;
+  padding: 15px 5px;
+  position: absolute;
+  bottom: 1rem;
+  left: 15px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  background: var(--dark-300);
+  transition: .3s;
+}
+
+.container video:hover + .controls,
+.container .controls:hover {
+  opacity: .95;
+}
+
+.container .controls > *:not(.video-duration) {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .controls .video-duration {
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  background: var(--dark-200);
+}
+
+.container .controls .video-duration .current-time {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  background-color: #2196f3;
+}
+
+.container .controls button {
+  margin: 0 5px;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 1px solid var(--light-200);
+  background: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.container .controls button:hover {
+  background: var(--light-100);
+}
+
+.container .controls button.active {
+  background: #3d3d3d;
+  color: #2196f3;
+}
+
+.container .controls .current-volume {
+  width: 25px;
+  height: 100px;
+  padding: 4px;
+  position: absolute;
+  bottom: calc(100% + 20px);
+  right: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+  color: #fff;
+  background: var(--dark-300);
+}
+
+.container .controls .current-volume span {
+  display: block;
+  height: 0%;
+  width: 100%;
+  margin: 4px 0;
+  background: #158fec;
+  transition: .3s;
+  z-index: 10;
+  position: relative;
+}
+
+.container .controls .current-volume span::before {
+  content: '';
+  width: 17px;
+  height: 72px;
+  position: absolute;
+  bottom:0;
+  left: 0;
+  background-color: var(--dark-100);
+  z-index: 0;
+}

@@ -1,0 +1,10 @@
+### make design [X]
+### controls to make :-
+# play [X]
+# pause [X]
+# mute / unmute [X]
+# volume up [X] 
+# volume down [X]
+# reset / replay [X]
+# auto play (loop) [X]
+# display current Time in video duration [X] 

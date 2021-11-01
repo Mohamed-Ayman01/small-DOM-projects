@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom video controls</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../Font_Awesome lib/all.min.css">
+  <link rel="stylesheet" href="main.css">
+  <!-- JS -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <section class="container">
+    <h1>Custom video controls</h1>
+    <video src="./video/test.mp4">
+      Sorry your browser dosen't support video tag
+    </video>
+    <section class="controls">
+      <div class="video-duration">
+        <div class="current-time" title="current time"></div>
+      </div>
+      <div class="state-controls">
+        <button class="pause active" title="pasue">
+          <i class="fas fa-pause"></i>
+        </button>
+        <button class="play" title="play">
+          <i class="fas fa-play"></i>
+        </button>
+        <button class="replay" title="replay">
+          <i class="fas fa-reply"></i>
+        </button>
+        <button class="loop" title="loop">
+          <i class="fas fa-redo"></i>
+        </button>
+      </div>
+      <div class="volume-controls">
+        <button class="mute-unmute" title="mute / unmute">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <button class="volume-up" title="volume-up">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+        <button class="volume-down" title="volume-down">
+          <i class="fas fa-arrow-down"></i>
+        </button>
+      </div>
+      <div class="current-volume">
+        <span></span>
+        <i class="fas fa-volume-up"></i>
+      </div>
+    </section>
+  </section>
+</body>
+</html>
