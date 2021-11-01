@@ -51,7 +51,7 @@ checkForTask();
 
 // Hold input field value
 let taskVal;
-taskInput.oninput = () => (taskVal = taskInput.value);
+taskInput.oninput = () => (taskVal = (taskInput.value).trim());
 
 // popup (modal)
 let popup = document.querySelector(".popup");

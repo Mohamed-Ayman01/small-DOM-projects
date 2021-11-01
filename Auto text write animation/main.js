@@ -5,7 +5,7 @@ let text =
 let index = 0;
 
 function writer() {
-  if (index >= 87) index = 0;
+  if (index >= text.length) index = 0;
 
   index += 1;
 

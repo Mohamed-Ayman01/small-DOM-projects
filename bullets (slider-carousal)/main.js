@@ -11,14 +11,14 @@ function iterateOnImages() {
   bullets.forEach((el) => el.classList.remove("active"));
   bullets[index].classList.add("active");
 
-  displayedImage.style.cssText = "opacity: 0; transform: scale(1.5)";
+  displayedImage.style.cssText = "opacity: 0;";
   
   setTimeout(() => {
     displayedImage.src = `./imgs/${bullets[index].dataset.path}`;
   }, 300);
   
   setTimeout(() => {
-    displayedImage.style.cssText = "opacity: 1; transform: scale(1)";
+    displayedImage.style.cssText = "opacity: 1;";
   }, 350);
 }
 
@@ -31,13 +31,13 @@ bullets.forEach((span) => {
     bullets.forEach((el) => el.classList.remove("active"));
     span.classList.add("active");
     
-    displayedImage.style.cssText = "opacity: 0; transform: scale(1.5)";
+    displayedImage.style.cssText = "opacity: 0;";
     setTimeout(() => {
       displayedImage.src = `./imgs/${this.dataset.path}`;
     }, 300);
     
     setTimeout(() => {
-      displayedImage.style.cssText = "opacity: 1; transform: scale(1)";
+      displayedImage.style.cssText = "opacity: 1;";
     }, 350);
   });
 });
