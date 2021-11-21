@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: sans-serif, arial;
+  color: #fff;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  width: 80%;
+  padding: 20px 15px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+
+nav figure h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav .links {
+  display: flex;
+}
+
+nav .links li {
+  margin: 0 15px;
+}
+
+@media (max-width: 760px) {
+  nav .links li:not(.burger-menu) {
+    display: none;
+  }
+}
+@media (min-width: 760px) {
+  nav .links li.burger-menu {
+    display: none;
+  }
+}
+
+nav .links li a {
+  padding: 5px 0;
+  color: #fff;
+  border-bottom: 2px solid transparent;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: .2s;
+}
+
+nav .links li a:hover {
+  border-color: lightskyblue;
+  color: lightskyblue
+}
+
+.content-slider .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(0 0 0 / .3);
+  z-index: 1;
+}
+
+.content-slider {
+  width: 100%;
+  height: 100vh;
+  padding: 60px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url(./img/Bg.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.content-slider .slide {
+  flex: 1 0 100vw;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  transition: 0.4s;
+}
+
+.content-slider .slide h2 {
+  margin: 1em auto;
+  font-size: 3em;
+  letter-spacing: 2px;
+}
+
+.content-slider .slide p {
+  margin: auto;
+  max-width: 40ch;
+}
+
+.content-slider > span {
+  padding: 40px;
+  position: absolute;
+  transform: translateY(-50%);
+  transition: 0.2s;
+  font-size: 3em;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.content-slider .arrow-left {
+  top: 50%;
+  left: 10px;
+}
+.content-slider .arrow-right {
+  top: 50%;
+  right: 10px;
+}
+
+.content-slider .arrow-left:hover {
+  transform: translateY(-50%) translatex(-10px)
+}
+
+.content-slider .arrow-right:hover {
+  transform: translateY(-50%) translatex(10px)
+}
